@@ -27,14 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="docker-compose.Designer.cs">
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>docker-compose.yaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="docker-compose.yaml">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>docker-compose.Designer.cs</LastGenOutput>
