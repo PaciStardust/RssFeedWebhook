@@ -8,8 +8,8 @@ namespace RssFeedWebhook.Json
 {
     internal class Template
     {
-        public string? EmptyText;
-        public string? Content;
-        public List<string>? Embeds;
+        public string? EmptyText {get; set;}
+        public string? Content {get; set;}
+        public List<string>? Embeds {get; set;}
     }
 }
