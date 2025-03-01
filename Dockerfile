@@ -16,4 +16,4 @@ RUN dotnet publish -c Release --property:PublishDir=out -a ${TARGETARCH}
 FROM mcr.microsoft.com/dotnet/runtime:8.0
 WORKDIR /App
 COPY --from=build-env /App/out .
-CMD ["dotnet", "RssFeedWebhook.dll", "$FLAG"]
+ENTRYPOINT ["sh", "-c", "dotnet RssFeedWebhook.dll $FLAG"]
