@@ -1,7 +1,7 @@
 ﻿services:
   RssFeedWebhook:
     restart: unless-stopped
-    image: ghcr.io/pacistardust/rssfeedwebhook:main
+    image: ghcr.io/pacistardust/rssfeedwebhook:master
     volumes: 
       - ./cfg:/App/cfg
     tty: true
