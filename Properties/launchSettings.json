@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RssFeedWebhook": {
+      "commandName": "Project",
+      "commandLineArgs": "editor"
+    }
+  }
+}

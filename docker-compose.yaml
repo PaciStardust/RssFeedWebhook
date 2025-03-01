@@ -1,0 +1,7 @@
+﻿services:
+  RssFeedWebhook:
+    restart: unless-stopped
+    image: ghcr.io/pacistardust/rssfeedwebhook:main
+    volumes: 
+      - ./cfg:/App/cfg
+    tty: true
