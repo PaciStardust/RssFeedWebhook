@@ -12,7 +12,7 @@ A simple but highly configurable Docker container to stay updated on any RSS-Fee
 ## Configuration
 RssFeedWebhook uses 2 configurable sections - `Feeds` and `Templates`
 ### Feeds
-A `Feed represents a single RSS feed to read from and only has 3 parameters:
+A `Feed` represents a single RSS feed to read from and only has 3 parameters:
 - `Name`: An identifier for the `Feed` *(Does not need to match the actual RSS feed and is simply used for identification purposes)*
 - `URL`: The URL of the RSS Feed
 - `Template`: The name of the `Template` to be used for posting in Discord
