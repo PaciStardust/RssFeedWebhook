@@ -3,10 +3,11 @@ A simple but highly configurable Docker container to stay updated on any RSS-Fee
 ## Set-Up
 1. Copy the `docker-compose.yaml` file into an empty directory
 2. Install [Docker Compose](https://docs.docker.com/compose/install/) on the machine you want to run the webhook on or just use regular docker if you know what you are doing *(Currently only set up for linux)* 
-3. For setting up the webhook you then run `docker compose up -e FLAG=editor`
+3. Run `docker compose pull` to download the container
+3. For setting up the webhook you then run `docker run -e FLAG=editor RssFeedWebhook`
 4. The webhook setup should now be running. It will ask you for a webhook URL, to create one [see here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
 5. Paste the URL and press enter, you will now be in the configuration screen *(see below for configuration)*
-6. After finished configuration, the container will quit setup, you can always re-enter it by shutting the container down with `docker compose down` followed by `docker compose up -e FLAG=editor`
+6. After finished configuration, the container will quit setup, you can always re-enter it by shutting the container down with `docker compose down` followed by `docker run -e FLAG=editor RssFeedWebhook`
 7. Use `docker compose up -d` to start up the webhook again, this will now run normally
 8. You can also reconfigure using the JSON file in the `cfg` folder if needed
 ## Configuration

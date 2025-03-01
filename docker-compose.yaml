@@ -5,3 +5,4 @@
     volumes: 
       - ./cfg:/App/cfg
     tty: true
+    stdin_open: true
