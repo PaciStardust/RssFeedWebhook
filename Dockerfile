@@ -1,7 +1,6 @@
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 ARG TARGETARCH
 ARG BUILDPLATFORM
-ARG FLAG=""
 
 WORKDIR /App
 
@@ -17,4 +16,4 @@ RUN dotnet publish -c Release --property:PublishDir=out -a ${TARGETARCH}
 FROM mcr.microsoft.com/dotnet/runtime:8.0
 WORKDIR /App
 COPY --from=build-env /App/out .
-ENTRYPOINT ["dotnet", "RssFeedWebhook.dll", "$FLAG"]
+CMD ["dotnet", "RssFeedWebhook.dll", "$FLAG"]
