@@ -242,7 +242,12 @@ namespace RssFeedWebhook
                             {
                                 error = ex.ToString();
                             }
-                            AskString($"\nResult of template using newest item from feed:\n\n{output}\n\n{(string.IsNullOrWhiteSpace(error) ? string.Empty : $"Could not format as JSON was not valid: {error}\n\n")}Press enter to continue", true);
+
+                            var sampleLines = TemplateApplicator.TokenModifierList.Select(x => $"{x} => [${x}$]");
+                            var sampleTemplate = new Template() { Content = string.Join("\n", sampleLines) };
+                            var sampleOut = new TemplateApplicator(sampleTemplate).Apply(testItem);
+
+                            AskString($"\nResult of template using newest item from feed:\n\n{output}\n\nValues:\n{sampleOut}\n\n{(string.IsNullOrWhiteSpace(error) ? string.Empty : $"Could not format as JSON was not valid: {error}\n\n")}Press enter to continue", true);
                         }
                         catch (Exception ex)
                         {
