@@ -243,7 +243,7 @@ namespace RssFeedWebhook
                                 error = ex.ToString();
                             }
 
-                            var sampleLines = TemplateApplicator.TokenModifierList.Select(x => $"{x} => [${x}$]");
+                            var sampleLines = TemplateApplicator.TokenListSeperate.Select(x => $"{x} => [${x}$]");
                             var sampleTemplate = new Template() { Content = string.Join("\n", sampleLines) };
                             var sampleOut = new TemplateApplicator(sampleTemplate).Apply(testItem);
 

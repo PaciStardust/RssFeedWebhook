@@ -65,6 +65,7 @@ namespace RssFeedWebhook
         }).Invoke(); //This is jank lol
 
         public static readonly string TokenList = string.Join(", ", _tokenFunctions.Keys);
+        public static readonly string[] TokenListSeperate = [.. _tokenFunctions.Keys];
 
         private static readonly (string, string, string)[] _tokenModifierDescriptions =
         [
